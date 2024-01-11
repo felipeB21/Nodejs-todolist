@@ -1,0 +1,15 @@
+<main class="b-width">
+  <% if (!name) { %>
+
+  <section>
+    <h1>Create your Todo List!</h1>
+    <span>Sign in to start creating.</span>
+  </section>
+  <% } else{%>
+  <section>
+    <div>
+      <h1>Welcome, <%= name %></h1>
+    </div>
+  </section>
+  <% } %>
+</main>

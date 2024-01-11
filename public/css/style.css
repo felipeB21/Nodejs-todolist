@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1d1d1d;
+  color: rgb(255, 255, 255);
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+header {
+  padding: 20px 0;
+  border-bottom: solid 1px #494949;
+}
+.h-width {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  gap: 25px;
+}
+nav li {
+  list-style-type: none;
+}
+.title {
+  font-size: 19px;
+}
+
+nav a {
+  color: rgb(175, 175, 175);
+  transition: 0.1s;
+}
+nav a:hover {
+  color: rgb(255, 255, 255);
+}
+.b-width {
+  width: 1000px;
+  margin: 30px auto;
+}
+h1 {
+  font-weight: 300;
+  font-size: 40px;
+}
+span {
+  padding: 8px 3px;
+  color: #cdcccc;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.w-form {
+  width: 600px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  font-size: 20px;
+}
+
+form input {
+  padding: 10px;
+  background: #373737;
+  margin: 14px 0;
+  border: solid 1px #535353;
+  font-size: 16px;
+  color: white;
+  outline: 0;
+  border-radius: 8px;
+}
+form button {
+  padding: 10px;
+  background-color: #222222;
+  border: solid 1px #535353;
+  font-size: 16px;
+  color: white;
+  outline: 0;
+  border-radius: 8px;
+  margin: 14px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+form button:hover {
+  background-color: #161616;
+}
+
+.no-acces {
+  margin: 14px 0;
+  border-top: solid 1px #494949;
+  padding: 14px 0;
+}
+
+.text-gray {
+  color: rgb(145, 145, 145);
+}
+.text-sky {
+  color: rgb(134, 134, 246);
+}

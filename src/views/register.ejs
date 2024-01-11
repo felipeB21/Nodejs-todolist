@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('./partials/head') %>
+  <body>
+    <%- include ('./partials/header') %>
+    <div class="w-form">
+      <div>
+        <div><p>Sign up to create your todo list!</p></div>
+        <div>
+          <form action="/register" method="post">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Your name" />
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Your email" />
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Your password"
+            />
+            <label for="confirmPassword">Confirm password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm your password"
+            />
+            <button type="submit">Sign up</button>
+          </form>
+        </div>
+        <div class="no-acces">
+          <p class="text-gray">You have an account?</p>
+          <p><a class="text-sky" href="/login">Sign in</a> now!</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
