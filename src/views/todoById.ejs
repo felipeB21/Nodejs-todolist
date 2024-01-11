@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('./partials/head') %>
+  <body>
+    <%- include ('./partials/header') %>
+    <div class="b-width">
+      <div class="mt-20">
+        <div class="bg-li">
+          <h2 class="title-li"><%= todoById.title %></h2>
+          <p><%= todoById.text %></p>
+        </div>
+      </div>
+      <div>
+        <button>Editar</button>
+        <button>Eliminar</button>
+      </div>
+    </div>
+  </body>
+</html>

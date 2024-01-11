@@ -10,20 +10,32 @@
           <form action="/register" method="post">
             <label for="name">Name</label>
             <input type="text" name="name" placeholder="Your name" />
+            <% if (errors && errors.name) { %>
+            <p class="error-msg"><%= errors.name.msg %></p>
+            <% } %>
             <label for="email">Email</label>
             <input type="email" name="email" placeholder="Your email" />
+            <% if (errors && errors.email) { %>
+            <p class="error-msg"><%= errors.email.msg %></p>
+            <% } %>
             <label for="password">Password</label>
             <input
               type="password"
               name="password"
               placeholder="Your password"
             />
+            <% if (errors && errors.password) { %>
+            <p class="error-msg"><%= errors.password.msg %></p>
+            <% } %>
             <label for="confirmPassword">Confirm password</label>
             <input
               type="password"
               name="confirmPassword"
               placeholder="Confirm your password"
             />
+            <% if (errors && errors.confirmPassword) { %>
+            <p class="error-msg"><%= errors.confirmPassword.msg %></p>
+            <% } %>
             <button type="submit">Sign up</button>
           </form>
         </div>

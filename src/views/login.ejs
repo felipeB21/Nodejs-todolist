@@ -10,12 +10,18 @@
           <form action="/login" method="post">
             <label for="email">Email</label>
             <input type="email" name="email" placeholder="Your email" />
+            <% if (errors && errors.email) { %>
+            <p class="error-msg"><%= errors.email.msg %></p>
+            <% } %>
             <label for="password">Password</label>
             <input
               type="password"
               name="password"
               placeholder="Your password"
             />
+            <% if (errors && errors.password) { %>
+            <p class="error-msg"><%= errors.password.msg %></p>
+            <% } %>
             <button type="submit">Sign in</button>
           </form>
         </div>

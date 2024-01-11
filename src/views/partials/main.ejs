@@ -1,6 +1,5 @@
 <main class="b-width">
   <% if (!name) { %>
-
   <section>
     <h1>Create your Todo List!</h1>
     <span>Sign in to start creating.</span>
@@ -9,7 +8,39 @@
   <section>
     <div>
       <h1>Welcome, <%= name %></h1>
+      <p class="sub-text">Start creating.</p>
     </div>
+    <% if (!getAllTodo && getAllTodo.length > 0) { %>
+    <div>
+      <a href="/todo">
+        <div class="bg-go-todo">
+          <div class="center">
+            <div class="flex-col">
+              <div class="bg-plus">
+                <p>+</p>
+              </div>
+              <p class="create">Create TODO</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <% } else {%>
+    <div class="mt-20">
+      <div>
+        <ul class="grid">
+          <% getAllTodo.forEach(post => { %>
+          <a class="all" href="/todo/<%= post.id %>">
+            <li class="bg-li">
+              <h2 class="title-li"><%= post.title %></h2>
+              <p><%= post.text %></p>
+            </li>
+          </a>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+    <% } %>
   </section>
   <% } %>
 </main>

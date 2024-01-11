@@ -1,0 +1,36 @@
+<div class="b-width">
+  <% if (!name) { %>
+  <div>
+    <h4>It´s seems that your not Loged in.</h4>
+    <p><a href="/login">Sign in</a> to create a TODO.</p>
+  </div>
+  <% } else{%>
+  <div>
+    <div>
+      <p>New TODO</p>
+    </div>
+    <div class="bg-form">
+      <form action="/todo" method="post">
+        <label for="title">Title:</label>
+        <input
+          type="text"
+          name="title"
+          placeholder="Ex: Supermarket ready
+        "
+        />
+        <label for="text">TODO:</label>
+        <textarea
+          name="text"
+          cols="30"
+          rows="10"
+          placeholder="Ex: Eggs, Milk, Sugar"
+        ></textarea>
+        <% if (errors && errors.text) { %>
+        <p class="error-msg"><%= errors.text.msg %></p>
+        <% } %>
+        <button class="button">Submit</button>
+      </form>
+    </div>
+  </div>
+  <% } %>
+</div>

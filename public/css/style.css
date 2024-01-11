@@ -73,13 +73,14 @@ form {
   flex-direction: column;
 }
 form label {
+  margin: 5px 0;
   font-size: 20px;
 }
 
 form input {
   padding: 10px;
   background: #373737;
-  margin: 14px 0;
+  margin: 6px 0;
   border: solid 1px #535353;
   font-size: 16px;
   color: white;
@@ -113,4 +114,105 @@ form button:hover {
 }
 .text-sky {
   color: rgb(134, 134, 246);
+}
+.error-msg {
+  color: rgb(240, 82, 82);
+  font-size: 15px;
+  max-width: 200px;
+}
+.sub-text {
+  padding: 4px;
+  font-size: 19px;
+}
+.bg-go-todo {
+  margin-top: 20px;
+  background-color: #484a4c;
+  border-radius: 10px;
+  padding: 20px;
+  height: 60vh;
+  transition: 0.3s;
+}
+.bg-go-todo:hover {
+  background-color: #4d4d4d;
+}
+.center {
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.bg-plus {
+  background-color: #454647;
+  border: solid 1px #5b5b5b;
+  padding: 20px 26px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.bg-plus:hover {
+  background-color: #353535;
+}
+.bg-plus p {
+  font-size: 26px;
+  font-weight: bold;
+}
+.create {
+  font-size: 20px;
+}
+textarea {
+  resize: none;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  color: white;
+  padding: 5px 0;
+}
+.bg-form form input {
+  background-color: transparent;
+  border-radius: 0%;
+  font-size: 23px;
+  border: none;
+  padding: 5px 0;
+  border-bottom: solid 1px #404040;
+}
+.bg-form {
+  margin-top: 20px;
+  background-color: #2d2d2d;
+  border-radius: 10px;
+}
+.bg-form form {
+  padding: 15px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+ul li {
+  list-style-type: none;
+}
+.mt-20 {
+  margin-top: 60px;
+}
+.all {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.bg-li {
+  height: 30vh;
+  width: 320px;
+  padding: 20px;
+  background-color: #404040;
+  border-radius: 10px;
+}
+.title-li {
+  margin-bottom: 13px;
 }

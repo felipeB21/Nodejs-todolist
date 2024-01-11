@@ -6,7 +6,11 @@
     <nav>
       <ul>
         <li><a href="/todo">Create Todo</a></li>
+        <% if (!name) { %>
         <li><a href="/login">Sign in</a></li>
+        <% }else{ %>
+        <li><a href="/profile/<%= id %>">Profile</a></li>
+        <% } %>
       </ul>
     </nav>
   </div>
