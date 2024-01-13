@@ -3,5 +3,14 @@
   <%- include ('./partials/head') %>
   <body>
     <%- include ('./partials/header') %>
+    <div class="b-width">
+      <div>
+        <h2 class="title">Welcome, <%= name %>!</h2>
+        <p>Email: <%= email %></p>
+      </div>
+      <div class="mt-20">
+        <p>ToDo's created: <%= allPosts.length %></p>
+      </div>
+    </div>
   </body>
 </html>

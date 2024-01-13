@@ -143,14 +143,88 @@ module.exports = {
       res.render("errorPage");
     }
   },
-  profile: (req, res) => {
+  deleteToDo: async (req, res) => {
+    const postId = req.params.id;
+    try {
+      const todoById = await db.Post.findByPk(postId);
+
+      if (todoById) {
+        await todoById.destroy();
+        res.redirect("/");
+      } else {
+        res.render("postNotFound", { postId });
+      }
+    } catch (error) {
+      console.error("Error deleting post by ID:", error);
+      res.render("errorPage");
+    }
+  },
+  editToDo: async (req, res) => {
+    const postId = req.params.id;
     const name = req.session.userName;
     const email = req.session.userEmail;
     const id = req.session.userId;
-    res.render("profile", {
-      name: name ? name : null,
-      email: email ? email : null,
-      id: id ? id : null,
-    });
+
+    try {
+      const todoById = await db.Post.findByPk(postId);
+
+      if (todoById) {
+        res.render("editTodo", {
+          todoById,
+          name: name ? name : null,
+          email: email ? email : null,
+          id: id ? id : null,
+        });
+      } else {
+        res.render("postNotFound", { postId });
+      }
+    } catch (error) {
+      console.error("Error fetching post by ID:", error);
+      res.render("errorPage");
+    }
+  },
+  postEditToDo: async (req, res) => {
+    const postId = req.params.id;
+    const { title, text } = req.body;
+
+    try {
+      const todoToUpdate = await db.Post.findByPk(postId);
+
+      if (todoToUpdate) {
+        // Actualiza los campos del ToDo con la información del formulario
+        await todoToUpdate.update({
+          title: title,
+          text: text,
+        });
+
+        res.redirect("/");
+      } else {
+        res.render("postNotFound", { postId });
+      }
+    } catch (error) {
+      console.error("Error updating post by ID:", error);
+      res.render("errorPage");
+    }
+  },
+  profile: async (req, res) => {
+    const name = req.session.userName;
+    const email = req.session.userEmail;
+    const id = req.session.userId;
+
+    try {
+      const allPosts = await db.Post.findAll();
+
+      req.session.length = allPosts.length;
+
+      res.render("profile", {
+        allPosts: allPosts ? allPosts : null,
+        name: name ? name : null,
+        email: email ? email : null,
+        id: id ? id : null,
+      });
+    } catch (error) {
+      console.error("Error fetching all posts:", error);
+      res.render("errorPage");
+    }
   },
 };

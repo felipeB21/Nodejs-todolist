@@ -11,8 +11,12 @@
         </div>
       </div>
       <div>
-        <button>Editar</button>
-        <button>Eliminar</button>
+        <form action="/todo/<%= todoById.id %>" method="post">
+          <button>Delete</button>
+        </form>
+        <a class="button" href="/edit-todo/<%= todoById.id %>">
+          <button>Edit</button></a
+        >
       </div>
     </div>
   </body>

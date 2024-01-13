@@ -28,5 +28,8 @@ router.get("/todo", mainController.getTodo);
 router.post("/todo", postValidator, postMiddleware, mainController.postTodo);
 router.get("/todo/:id", mainController.getTodoById);
 router.get("/profile/:id", mainController.profile);
+router.post("/todo/:id", mainController.deleteToDo);
+router.get("/edit-todo/:id", mainController.editToDo);
+router.post("/edit-todo/:id", mainController.postEditToDo);
 
 module.exports = router;

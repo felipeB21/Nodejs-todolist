@@ -99,6 +99,22 @@ form button {
   cursor: pointer;
   transition: 0.2s;
 }
+.button button {
+  padding: 10px;
+  background-color: #222222;
+  border: solid 1px #535353;
+  font-size: 16px;
+  color: white;
+  outline: 0;
+  width: 100%;
+  border-radius: 8px;
+  margin: 14px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.button button:hover {
+  background-color: #161616;
+}
 form button:hover {
   background-color: #161616;
 }
@@ -147,6 +163,7 @@ form button:hover {
   align-items: center;
   gap: 20px;
 }
+
 .bg-plus {
   background-color: #454647;
   border: solid 1px #5b5b5b;
@@ -212,7 +229,12 @@ ul li {
   padding: 20px;
   background-color: #404040;
   border-radius: 10px;
+  transform: 0.2s;
 }
+.bg-li:hover {
+  background-color: #4a4a4a;
+}
+
 .title-li {
   margin-bottom: 13px;
 }
